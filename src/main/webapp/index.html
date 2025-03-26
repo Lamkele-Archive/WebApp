@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Essential SEO Tags -->
+<meta name="description" content="Purr & Pages Café - A cozy pastel-themed cat café with books and coffee. Book your visit to pet adoptable cats in a relaxing environment.">
+<meta name="keywords" content="cat café, pet café, book café, pastel theme, coffee with cats">
+<meta name="author" content="Your Name">
+
+<!-- OpenGraph (for social media sharing) -->
+<meta property="og:title" content="Purr & Pages Café">
+<meta property="og:description" content="Books, cats & coffee in perfect harmony!">
+<meta property="og:image" content="https://yoursite.com/images/cafe-preview.jpg">
+<meta property="og:url" content="https://yoursite.com">
+<meta property="og:type" content="website">
+
+<!-- Favicon -->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Purr & Pages Café</title>
+    <style>
+        /* Enhanced Pastel Color Palette */
+        :root {
+            --beige: #F5E6CA;
+            --lavender: #E2D4F0;
+            --mint: #D4F0E8;
+            --peach: #FFD8C7;
+            --pink: #FFC0CB;
+            --text: #5A4A42;
+            --purple: #8B6FA8;
+        }
+
+        /* Improved Base Styles */
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            background-color: var(--beige);
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--peach);
+            padding: 25px;
+            text-align: center;
+            border-bottom: 3px dotted var(--pink);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        h1 {
+            color: var(--purple);
+            font-size: 2.8rem;
+            margin: 0;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            color: var(--text);
+            font-style: italic;
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+
+        /* Main Content Layout */
+        .container {
+            display: flex;
+            padding: 25px;
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Booking Form Styling */
+        .booking-form {
+            background-color: var(--lavender);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            flex: 1;
+        }
+
+        .booking-form h2 {
+            color: var(--purple);
+            margin-top: 0;
+            font-size: 1.8rem;
+        }
+
+        /* Info Panel Styling */
+        .info-panel {
+            background-color: var(--mint);
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+
+        /* Form Elements */
+        input, select, textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 2px solid var(--pink);
+            border-radius: 8px;
+            background-color: white;
+            font-family: inherit;
+            font-size: 1rem;
+        }
+
+        /* Button Styles */
+        button {
+            background-color: var(--pink);
+            color: white;
+            padding: 14px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            font-weight: bold;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #FFA7B5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        /* Decorative Elements */
+        .cat-icon {
+            font-size: 1.4rem;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+
+        .pastel-swirl {
+            height: 120px;
+            background: linear-gradient(45deg, var(--lavender), var(--mint), var(--peach));
+            margin: 0;
+            border-radius: 0 0 50% 50% / 0 0 30px 30px;
+        }
+
+        /* Cat Highlight Section */
+        .cat-highlight {
+            background-color: var(--pink);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 25px;
+        }
+
+        .cat-highlight h3 {
+            margin-top: 0;
+            color: white;
+        }
+
+        /* Footer Styles */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--peach);
+            margin-top: 30px;
+            border-top: 3px dotted var(--pink);
+            font-size: 1.1rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column;
+                padding: 15px;
+            }
+            
+            .booking-form, .info-panel {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+            
+            h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🐱 Purr & Pages Café 🍵</h1>
+        <p class="tagline">Books, cats & coffee in perfect harmony!</p>
+    </header>
+
+    <div class="pastel-swirl"></div>
+
+    <div class="container">
+        <div class="booking-form">
+            <h2>📅 Book Your Visit</h2>
+            <form id="bookingForm" onsubmit="submitBooking(event)">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" placeholder="Whiskers McReader" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" placeholder="meow@example.com" required>
+
+                <label for="date">Visit Date:</label>
+                <input type="date" id="date" required>
+
+                <label for="time">Time Slot:</label>
+                <select id="time" required>
+                    <option value="">Select a time</option>
+                    <option value="9am">9:00 AM - Morning Purrs</option>
+                    <option value="11am">11:00 AM - Cat Nap Hours</option>
+                    <option value="2pm">2:00 PM - Afternoon Cuddles</option>
+                    <option value="4pm">4:00 PM - Sunset Snuggles</option>
+                </select>
+
+                <label for="service">Purr Package:</label>
+                <select id="service">
+                    <option value="basic">Basic Visit (1 hr) - $10</option>
+                    <option value="deluxe">Deluxe (2 hrs + coffee) - $18</option>
+                    <option value="bookworm">Bookworm Special (3 hrs + book rental) - $25</option>
+                </select>
+
+                <label for="notes">Special Requests:</label>
+                <textarea id="notes" rows="4" placeholder="E.g.: 'I want to read to the orange tabby!'"></textarea>
+
+                <button type="submit">Reserve Your Spot! <span class="cat-icon">🐾</span></button>
+            </form>
+        </div>
+
+        <div class="info-panel">
+            <h2>🌸 Our Pastel Paradise</h2>
+            <p>Welcome to the coziest spot in town where you can:</p>
+            <ul style="list-style-type: none; padding-left: 0;">
+                <li>☕ Sip artisanal coffee</li>
+                <li>📚 Browse vintage books</li>
+                <li>🐈 Pet adoptable cats (all vaccinated & friendly!)</li>
+            </ul>
+
+            <h3>Today's Specials</h3>
+            <p>🍰 <strong>Lavender Latte</strong> + Cat Cookie - $8</p>
+            <p>📖 <strong>Book + Cat</strong> Combo (1 hr reading time) - $12</p>
+
+            <div class="cat-highlight">
+                <h3>🐱 Meet Our Stars!</h3>
+                <p><strong>Mochi</strong> - Fluffy white Persian</p>
+                <p><strong>Bean</strong> - Playful black kitten</p>
+                <p><strong>Toast</strong> - Gentle orange tabby</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>📍 123 Pastel Lane, Beige Valley | 📞 (555) MEOW-NOW</p>
+        <p>⏰ Open 9AM-6PM daily</p>
+    </footer>
+
+    <script>
+        // Basic form handling
+        function submitBooking(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const time = document.getElementById('time').value;
+            
+            alert(`Thanks ${name}! Your ${time} booking is received. We'll email confirmation shortly.`);
+            document.getElementById('bookingForm').reset();
+        }
+    </script>
+</body>
+</html>

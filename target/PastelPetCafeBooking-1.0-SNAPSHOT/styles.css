@@ -1,0 +1,38 @@
+body {
+    background-color: #F5F5DC; /* Beige */
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    color: #FFB6C1; /* Light Pink */
+}
+
+form {
+    background-color: #FFF;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    display: inline-block;
+}
+
+label, select, input {
+    font-size: 1.1em;
+    margin: 10px;
+}
+
+button {
+    background-color: #ADD8E6; /* Light Blue */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #98FF98; /* Mint Green */
+}
+
